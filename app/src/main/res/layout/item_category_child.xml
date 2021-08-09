@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <mor.aliakbar.tavaloodshop.customview.imageview.AppImageView
+        android:id="@+id/categoryImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="?colorPrimary"
+        app:roundedCornerRadius="8dp"
+        app:viewAspectRatio="1" />
+
+    <TextView
+        android:id="@+id/titleCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/low"
+        android:gravity="center"
+        android:padding="@dimen/little"
+        android:lineSpacingExtra="0dp"
+        android:textAppearance="?textAppearanceBody2" />
+
+</LinearLayout>

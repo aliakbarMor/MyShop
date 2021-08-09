@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/low"
+    android:background="?selectableItemBackground">
+
+    <mor.aliakbar.tavaloodshop.customview.imageview.AppImageView
+        android:id="@+id/searchProductImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="@dimen/little"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCornerRadius="4dp" />
+
+    <TextView
+        android:id="@+id/searchProductTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/high"
+        android:layout_marginEnd="@dimen/high"
+        android:layout_toEndOf="@+id/searchProductImageView"
+        android:gravity="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/searchProductImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

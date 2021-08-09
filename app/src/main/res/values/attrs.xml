@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="dividerColor" format="color" />
+
+    <attr name="iconColor" format="color" />
+
+    <attr name="progressBarColor" format="color" />
+
+    <attr name="backgroundColorCart" format="color" />
+
+    <declare-styleable name="TitleToolbar">
+        <attr name="toolbar_text" format="string" />
+    </declare-styleable>
+</resources>

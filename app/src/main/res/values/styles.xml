@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Bottom Navigation Style -->
+    <style name="BottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_navigation_item_color</item>
+        <item name="itemTextColor">@color/bottom_navigation_item_color</item>
+        <item name="itemRippleColor">@color/bottom_navigation_ripple_color</item>
+        <item name="itemTextAppearanceActive">@style/activeItemBottomNavigationTextAppearance</item>
+    </style>
+
+    <style name="activeItemBottomNavigationTextAppearance" parent="TextAppearance.MyTheme.Caption">
+        <item name="fontFamily">@font/primary_extra_bold</item>
+        <item name="android:fontFamily">@font/primary_extra_bold</item>
+    </style>
+
+
+    <!-- App Auth EditText Style -->
+    <style name="AppAuthEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/background_auth_edittext</item>
+        <item name="android:textSize">@dimen/editTextTextSize</item>
+        <item name="android:textColor">?colorOnBackground</item>
+        <item name="android:padding">@dimen/high</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColorHint">@color/white48</item>
+    </style>
+
+    <style name="InformationTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="ProfileLinks">
+        <item name="android:minHeight">46dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:textAppearance">?textAppearanceBody1</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="AuthSnackBarStyle" parent="Widget.MaterialComponents.Snackbar">
+        <item name="backgroundTint">@color/blue</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Avatar">
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

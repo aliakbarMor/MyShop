@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".view.addcomment.AddCommentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarHeight">
+
+        <mor.aliakbar.tavaloodshop.customview.toolbar.AppToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbarHeight"
+            app:toolbar_text="@string/insertComment" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/high"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <EditText
+            android:id="@+id/comment_title_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_simple"
+            android:hint="@string/title"
+            android:maxLines="1"
+            android:padding="@dimen/normal" />
+
+
+        <EditText
+            android:id="@+id/comment_content_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/high"
+            android:background="@drawable/background_simple"
+            android:gravity="start|top"
+            android:hint="@string/comment"
+            android:inputType="text|textMultiLine"
+            android:minHeight="150dp"
+            android:padding="@dimen/normal"
+            android:paddingTop="@dimen/high"
+            android:paddingBottom="@dimen/high" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_comment_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/high"
+        android:layout_marginBottom="@dimen/high"
+        app:srcCompat="@drawable/ic_send_24dp" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/materialCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/low"
+    android:layout_marginTop="@dimen/little"
+    android:layout_marginEnd="@dimen/low"
+    android:layout_marginBottom="@dimen/little"
+    android:layoutDirection="rtl"
+    app:cardCornerRadius="@dimen/low"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <mor.aliakbar.tavaloodshop.customview.imageview.AppImageView
+            android:id="@+id/productIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/high"
+            android:layout_marginRight="@dimen/high"
+            app:roundedCornerRadius="4dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/productTitleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/high"
+            android:layout_marginRight="@dimen/high"
+            android:textAppearance="?textAppearanceHeadline6"
+            app:layout_constraintBottom_toBottomOf="@+id/productIv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/productIv"
+            app:layout_constraintTop_toTopOf="@+id/productIv"
+            tools:text="Product Title" />
+
+        <TextView
+            android:id="@+id/previousPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/high"
+            android:layout_marginTop="@dimen/low"
+            android:textAppearance="?textAppearanceBody2"
+            android:textColor="?android:textColorSecondary"
+            app:layout_constraintBottom_toTopOf="@+id/priceTv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="16000" />
+
+        <TextView
+            android:id="@+id/priceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/high"
+            android:layout_marginTop="@dimen/little"
+            android:textAppearance="?textAppearanceBody1"
+            app:layout_constraintBottom_toBottomOf="@+id/decreaseBtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/previousPriceTv"
+            tools:text="14000" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/low"
+            android:text="@string/count"
+            android:textAppearance="?textAppearanceBody1"
+            android:textColor="?android:textColorSecondary"
+            app:layout_constraintLeft_toLeftOf="@+id/productIv"
+            app:layout_constraintRight_toRightOf="@+id/productIv"
+            app:layout_constraintTop_toBottomOf="@+id/productIv" />
+
+        <TextView
+            android:id="@+id/cartItemCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/low"
+            android:textAppearance="?textAppearanceHeadline6"
+            app:layout_constraintLeft_toLeftOf="@+id/textView2"
+            app:layout_constraintRight_toRightOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:text="2" />
+
+        <ImageView
+            android:id="@+id/increaseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/high"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_increase_cart_item_count"
+            app:layout_constraintBottom_toBottomOf="@+id/cartItemCountTv"
+            app:layout_constraintLeft_toRightOf="@+id/cartItemCountTv"
+            app:layout_constraintTop_toTopOf="@+id/cartItemCountTv" />
+
+        <ImageView
+            android:id="@+id/decreaseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/high"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_decrease_cart_item_count"
+            app:layout_constraintBottom_toBottomOf="@+id/cartItemCountTv"
+            app:layout_constraintRight_toLeftOf="@+id/cartItemCountTv"
+            app:layout_constraintTop_toTopOf="@+id/cartItemCountTv" />
+
+        <ProgressBar
+            android:id="@+id/changeCountProgressBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/decreaseBtn"
+            app:layout_constraintLeft_toRightOf="@+id/decreaseBtn"
+            app:layout_constraintRight_toLeftOf="@+id/increaseBtn"
+            app:layout_constraintTop_toTopOf="@+id/decreaseBtn"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/removeFromCartBtn"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="16dp"
+            android:background="?selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/removeFromCart"
+            android:textAppearance="?textAppearanceBody1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/decreaseBtn" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?dividerColor"
+            app:layout_constraintBottom_toTopOf="@+id/removeFromCartBtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

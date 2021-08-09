@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:orientation="vertical"
+    android:paddingBottom="12dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="189dp">
+
+        <mor.aliakbar.tavaloodshop.customview.imageview.AppImageView
+            android:id="@+id/productImageViewItem"
+            android:layout_width="match_parent"
+            android:layout_height="189dp"
+            app:roundedCornerRadius="12dp"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/productFavoriteImageViewItem"
+            android:layout_width="@dimen/normalIconSize"
+            android:layout_height="@dimen/normalIconSize"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/high"
+            android:layout_marginEnd="@dimen/high"
+            android:background="@drawable/background_favorite"
+            android:padding="@dimen/low"
+            android:src="@drawable/ic_favorites"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/productTitleTextViewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal"
+        android:layout_marginTop="@dimen/high"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:minLines="2"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/productPreviousPriceTextViewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/low"
+        android:layout_marginEnd="@dimen/normal"
+        android:textAppearance="?textAppearanceBody2"
+        android:textColor="?android:textColorSecondary"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/productCurrentPriceTextViewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="@dimen/normal"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintStart_toStartOf="@+id/productPreviousPriceTextViewItem"
+        app:layout_constraintTop_toBottomOf="@+id/productPreviousPriceTextViewItem"
+        tools:text="TextView" />
+
+</LinearLayout>

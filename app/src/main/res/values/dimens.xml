@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ViewPager Height size (dp) -->
+    <dimen name="viewPagerHeight">200dp</dimen>
+
+    <!-- Toolbar Height size (dp) -->
+    <dimen name="toolbarHeight">56dp</dimen>
+
+    <!-- Margin size (dp) -->
+    <dimen name="little">4dp</dimen>
+    <dimen name="low">8dp</dimen>
+    <dimen name="normal">12dp</dimen>
+    <dimen name="high">16dp</dimen>
+    <dimen name="veryHigh">20dp</dimen>
+
+    <!-- Icon size (dp) -->
+    <dimen name="littleIconSize">24dp</dimen>
+    <dimen name="normalIconSize">32dp</dimen>
+    <dimen name="largeIconSize">56dp</dimen>
+
+    <!-- Edittext size (dp) -->
+    <dimen name="editTextsHeight">46dp</dimen>
+    <dimen name="authEditTextWidth">270dp</dimen>
+
+    <!-- Custom elevation size (dp) -->
+    <dimen name="customCartCardElevation">2dp</dimen>
+
+    <!-- Texts size (sp) -->
+    <dimen name="textSizeHeadline5">22sp</dimen>
+    <dimen name="textSizeHeadline6">16sp</dimen>
+    <dimen name="textSizeBody1">14sp</dimen>
+    <dimen name="textSizeBody2">12sp</dimen>
+    <dimen name="editTextTextSize">16sp</dimen>
+    <dimen name="textSizeEmptySate">18sp</dimen>
+
+</resources>

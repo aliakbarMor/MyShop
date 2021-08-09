@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Theme color -->
+    <color name="black">#262A35</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#217cf3</color>
+    <color name="gray">#EFEFEF</color>
+    <color name="darkGray">#b3b6be</color>
+
+    <!-- Custom color -->
+    <color name="transparent">#00FFFFFF</color>
+    <color name="mediumWhite">#f8f8f8</color>
+    <color name="white48">#48ffffff</color>
+</resources>

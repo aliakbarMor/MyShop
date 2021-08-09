@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/high"
+    android:layout_marginTop="@dimen/low"
+    android:layout_marginEnd="@dimen/high"
+    android:layout_marginBottom="@dimen/low"
+    android:background="@drawable/background_simple"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/high">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:text="@string/orderId"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/orderIdTextViewItemOrderHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?dividerColor" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/high">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:text="@string/amount"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/orderAmountTextViewItemOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?dividerColor" />
+
+    <HorizontalScrollView
+        android:id="@+id/orderDetailHorizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:clipToPadding="false"
+        android:padding="@dimen/high"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/orderProductsLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?dividerColor" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/order_detail_button"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/orderDetail" />
+
+</LinearLayout>

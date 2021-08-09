@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Tavalood Shop</string>
+    <string name="home">خانه</string>
+    <string name="shopping_cart">سبد خرید</string>
+    <string name="profile">اطلاعات کاربری</string>
+    <string name="category">دسته بندی</string>
+    <string name="search">جستوجو</string>
+    <string name="viewAll">مشاهده همه</string>
+    <string name="comments">نظرات کاربران</string>
+    <string name="insertComment">افزودن نظر</string>
+    <string name="viewAllComments">مشاهده همه نظرات</string>
+    <string name="addToCart">اضافه کردن به سبد خرید</string>
+    <string name="productList">لیست محصولات</string>
+    <string name="sortBy">مرتب سازی بر اساس</string>
+    <string name="sortLatestProduct">جدیدترین</string>
+    <string name="sortPopularProduct">پربازدیدترین</string>
+    <string name="sortPriceHighToLowProduct">گران ترین</string>
+    <string name="sortPriceLowToHighProduct">ارزان ترین</string>
+    <string name="success_addToCart">به سبد خرید اضافه شد</string>
+
+    <string name="signInToAccount">ورود به حساب کاربری</string>
+    <string name="enterEmailAndPassword">لطفا ایمیل و رمز عبور خود را وارد کنید</string>
+    <string name="email">ایمیل</string>
+    <string name="password">رمز عبور</string>
+    <string name="singIn">ورود</string>
+    <string name="doHaveNotAnAccount">حساب کاربری ندارید؟</string>
+    <string name="pleaseSignUp">ثبت نام کنید</string>
+    <string name="signUpToAccount">ایجاد حساب کاربری</string>
+    <string name="signUp">ثبت نام</string>
+    <string name="doYouHaveAccount">قبلا ثبت نام کرده اید؟</string>
+    <string name="signUpUsernameErrorMessage">این نام کاربری قبلا ثبت شده است!</string>
+    <string name="usernameOrPasswordIsIncorrect">نام کاربری و یا پسورد صحیح نمی باشد!</string>
+    <string name="timeoutExceptionMessage">دریافت اطلاعات با مشکل روبرو شد!</string>
+    <string name="errorReceivingInformation">خطایی در دریافت اطلاعات به وجود آمد!</string>
+    <string name="unspecifiedError">خطای نامشخص</string>
+    <string name="pleaseSignIn">وارد حساب کاربری خود شوید</string>
+    <string name="pleaseEnterEmail">لطفا ایمیل خود را وارد نمایید!</string>
+    <string name="pleaseEnterValidEmail">لطفا ایمیل معتبر وارد نمایید!</string>
+    <string name="pleaseEnterPassword">لطفا رمز عبور خود را وارد نمایید!</string>
+    <string name="signInSuccessfully">ورود شما با موفقیت انجام شد!</string>
+    <string name="signUpSuccessfully">ثبت نام شما با موفقیت انجام شد!</string>
+    <string name="onlyPasswordsLongerThan8CharIsValid">رمز عبور شما باید بیشتر از هشت رقم باشد!</string>
+
+    <string name="pay">پرداخت</string>
+    <string name="count">تعداد</string>
+    <string name="removeFromCart">حذف از سبد خرید</string>
+    <string name="purchaseDetail">جزییات خرید</string>
+    <string name="totalPrice">مبلغ کل خرید</string>
+    <string name="shippingCost">هزینه ارسال</string>
+    <string name="payablePrice">مبلغ قابل پرداخت</string>
+
+    <string name="cartEmptyStateLoginRequired">وارد حساب کاربری خود شوید!</string>
+    <string name="cartEmptyStateCallToAction">ورود به حساب کاربری</string>
+    <string name="cartEmptyState">هنوز سبد خرید شما خالی می باشد!</string>
+    <string name="shippingToolbarTitle">انتخاب تحویل گیرنده و شیوه پرداخت</string>
+    <string name="onlinePayment">پرداخت اینترنتی</string>
+    <string name="cashOnDelivery">پرذاخت در محل</string>
+
+    <string name="firstName">نام</string>
+    <string name="lastName">نام خانوادگی</string>
+    <string name="postalCode">کد پستی</string>
+    <string name="postalCodeHelper">لطفا کد پستی را بدون خط فاصله وارد نمایید</string>
+    <string name="addressHelperText">لطفا آدرس خود را بدون حرف اضافی وارد کنید</string>
+    <string name="saveInformation">ذخیره اطلاعات</string>
+    <string name="phoneNumber">شماره موبایل</string>
+    <string name="address">آدرس</string>
+    <string name="checkoutToolbarTitle">رسید پرداخت</string>
+    <string name="returnHome">بازگشت به صفحه اصلی</string>
+    <string name="orderHistory">سوابق سفارش</string>
+    <string name="purchaseStatus">وضعیت سفارش</string>
+    <string name="price">مبلغ</string>
+
+    <string name="favorites">لیست علاقه مندی ها</string>
+    <string name="emptyStateFavorites">هنوز چیزی به لیست علاقه مندی ها اضافه نکردی!</string>
+    <string name="signIn">ورود به حساب کاربری</string>
+    <string name="signOut">خروج از حساب کاربری</string>
+    <string name="guest_user">کاربر مهمان</string>
+    <string name="favorites_empty_state_message">هنوز محصولی به لیست علاقه مندی اضافه نکردی</string>
+    <string name="favorites_help_message">برای حذف محصول ان را به راست بکشید</string>
+    <string name="removeFavoriteItem">از لیست علاقه مندی ها حذف شد</string>
+    <string name="orderHistory_orderId">شناسه سفارش</string>
+    <string name="orderHistory_payable">مبلغ</string>
+    <string name="orderId">شناسه سفارش</string>
+    <string name="amount">مبلغ</string>
+    <string name="orderDetail">جزئیات سفارش</string>
+
+    <string name="firstNameError">لطفا نام خود را وارد کنید!</string>
+    <string name="lastNameError">لطفا نام خانوادگی خود را وارد کنید!</string>
+    <string name="phoneNumberError">شماره تلفن شما باید حتما 11 رقم باشد!</string>
+    <string name="phoneNumberSchemeError">لطفا شماره تلفنتان را صحیح وارد کنید!</string>
+    <string name="postalCardError">لطفا کد پستی خود را وارد کنید!</string>
+    <string name="postalCardSchemeError">کد پستی شما باید حتما 10 رقم باشد!</string>
+    <string name="addressError">لطفا آدرس خود را وارد نمایید!</string>
+    <string name="addressSchemeError">آدرس شما باید بیش از 20 حرف باشد!</string>
+
+    <string name="paymentSuccessfully">پرداخت با موفقیت انجام شد!</string>
+    <string name="paymentFailed">پرداخت موفقیت آمیز نبود!</string>
+    <string name="increaseCartItemError">تعداد محصول نمی تواند بیشتر از 5 عدد باشد!</string>
+    <string name="decreaseCartItemError">تعداد محصول نمی تواند کمتر از 1 عدد باشد!</string>
+    <string name="profileEdit">ویرایش حساب کاربری</string>
+    <string name="title">عنوان</string>
+    <string name="comment">نظر شما…</string>
+    <string name="commentTitleError">لطفا عنوان نظر خود را وارد نمایید!</string>
+    <string name="commentContentError">لطفا نظر خود را وارد نمایید!</string>
+    <string name="addingCommentSuccessfully">نظر شما با موفقیت ثبت گردید!</string>
+
+
+    <string-array name="productSortArray">
+        <item>@string/sortLatestProduct</item>
+        <item>@string/sortPopularProduct</item>
+        <item>@string/sortPriceHighToLowProduct</item>
+        <item>@string/sortPriceLowToHighProduct</item>
+    </string-array>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mor.aliakbar.tavaloodshop">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.App"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".view.addcomment.AddCommentActivity"></activity>
+        <activity android:name=".view.profiledetail.ProfileDetailActivity" />
+        <activity android:name=".view.orderhistory.OrderHistoryActivity" />
+        <activity android:name=".view.favorite.FavoriteActivity" />
+        <activity android:name=".view.checkout.CheckOutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="expertdevelopers.ir"
+                    android:pathPattern="/appCheckout"
+                    android:scheme="nike" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.shipping.ShippingActivity" />
+        <activity
+            android:name=".view.auth.AuthActivity"
+            android:theme="@style/Theme.App.Auth" />
+        <activity android:name=".view.productlist.ProductListActivity" />
+        <activity android:name=".view.commentList.CommentListActivity" />
+        <activity android:name=".view.productdetail.ProductDetailActivity" />
+        <activity android:name=".view.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

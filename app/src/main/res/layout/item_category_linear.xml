@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/low"
+    android:layout_marginTop="@dimen/high"
+    android:layout_marginEnd="@dimen/low"
+    android:orientation="horizontal">
+
+    <mor.aliakbar.tavaloodshop.customview.imageview.AppImageView
+        android:id="@+id/categoryImageView"
+        android:layout_width="@dimen/largeIconSize"
+        android:layout_height="@dimen/largeIconSize"
+        android:layout_marginStart="@dimen/low"
+        android:background="@drawable/background_item_category"
+        android:padding="@dimen/low"
+        android:textAppearance="?textAppearanceBody2"
+        android:textColor="?colorPrimary"
+        app:roundedCornerRadius="8dp" />
+
+    <TextView
+        android:id="@+id/titleCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/low"
+        android:gravity="center"
+        android:padding="@dimen/little"
+        android:textAppearance="?textAppearanceBody1" />
+
+</LinearLayout>
