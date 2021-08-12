@@ -11,8 +11,7 @@ import javax.inject.Inject
 class ProductRepositoryImpl @Inject constructor(
     private var remoteProductSource: ProductDataSource,
     private var localProductSource: ProductDataSource
-) :
-    ProductRepository {
+) : ProductRepository {
 
     override suspend fun get(
         sort: Int,

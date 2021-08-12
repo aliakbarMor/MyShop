@@ -13,11 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.App"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.addcomment.AddCommentActivity"></activity>
-        <activity android:name=".view.profiledetail.ProfileDetailActivity" />
-        <activity android:name=".view.orderhistory.OrderHistoryActivity" />
-        <activity android:name=".view.favorite.FavoriteActivity" />
-        <activity android:name=".view.checkout.CheckOutActivity">
+        <activity android:name=".feature.addcomment.AddCommentActivity"></activity>
+        <activity android:name=".feature.profiledetail.ProfileDetailActivity" />
+        <activity android:name=".feature.orderhistory.OrderHistoryActivity" />
+        <activity android:name=".feature.favorite.FavoriteActivity" />
+        <activity android:name=".feature.checkout.CheckOutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -30,14 +30,14 @@
                     android:scheme="nike" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.shipping.ShippingActivity" />
+        <activity android:name=".feature.shipping.ShippingActivity" />
         <activity
-            android:name=".view.auth.AuthActivity"
+            android:name=".feature.auth.AuthActivity"
             android:theme="@style/Theme.App.Auth" />
-        <activity android:name=".view.productlist.ProductListActivity" />
-        <activity android:name=".view.commentList.CommentListActivity" />
-        <activity android:name=".view.productdetail.ProductDetailActivity" />
-        <activity android:name=".view.main.MainActivity">
+        <activity android:name=".feature.productlist.ProductListActivity" />
+        <activity android:name=".feature.commentList.CommentListActivity" />
+        <activity android:name=".feature.productdetail.ProductDetailActivity" />
+        <activity android:name=".feature.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -61,8 +61,8 @@ class UserLocalSource @Inject constructor(private var sharedPreferences: SharedP
         val userInformation = UserInformation(
             sharedPreferences.getString(Variable.SHARED_FIRST_NAME_KEY, "")!!,
             sharedPreferences.getString(Variable.SHARED_LAST_NAME_KEY, "")!!,
-            sharedPreferences.getString(Variable.SHARED_PHONE_NUMBER_KEY, "")!!,
             sharedPreferences.getString(Variable.SHARED_POSTAL_CODE_KEY, "")!!,
+            sharedPreferences.getString(Variable.SHARED_PHONE_NUMBER_KEY, "")!!,
             sharedPreferences.getString(Variable.SHARED_ADDRESS_KEY, "")!!
         )
         userInformation.userName = sharedPreferences.getString(Variable.SHARED_EMAIL_KEY, null)

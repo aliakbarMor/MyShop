@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.google.android.material.snackbar.Snackbar
 import mor.aliakbar.tavaloodshop.R
-import mor.aliakbar.tavaloodshop.view.auth.AuthActivity
+import mor.aliakbar.tavaloodshop.feature.auth.AuthActivity
 import mor.aliakbar.tavaloodshop.services.exception.AppException
 import mor.aliakbar.tavaloodshop.services.exception.ExceptionType
 import org.greenrobot.eventbus.Subscribe

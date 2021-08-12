@@ -38,6 +38,7 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), BaseView {
         _binding = bindingInflater.invoke(layoutInflater)
         setContentView(requireNotNull(_binding).root)
     }
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

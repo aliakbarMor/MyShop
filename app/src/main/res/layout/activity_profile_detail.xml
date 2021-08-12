@@ -10,7 +10,7 @@
         android:layout_height="@dimen/toolbarHeight">
 
         <mor.aliakbar.tavaloodshop.customview.toolbar.AppToolbar
-            android:id="@+id/toolbarProfileDetail"
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/toolbarHeight"
             app:toolbar_text="@string/profileEdit" />

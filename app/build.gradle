@@ -83,7 +83,6 @@ dependencies {
     implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
 
     implementation "com.facebook.fresco:fresco:2.5.0"
-    implementation 'com.squareup.picasso:picasso:2.71828'
 
     implementation 'org.greenrobot:eventbus:3.2.0'
 

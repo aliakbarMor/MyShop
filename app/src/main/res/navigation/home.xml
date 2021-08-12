@@ -8,6 +8,6 @@
     <fragment
         android:id="@+id/homeFragment"
         tools:layout="@layout/fragment_home"
-        android:name="mor.aliakbar.tavaloodshop.view.home.HomeFragment"
+        android:name="mor.aliakbar.tavaloodshop.feature.home.HomeFragment"
         android:label="HomeFragment" />
 </navigation>

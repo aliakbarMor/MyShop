@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/cartFragment"
-        android:name="mor.aliakbar.tavaloodshop.view.cart.CartFragment"
+        android:name="mor.aliakbar.tavaloodshop.feature.cart.CartFragment"
         tools:layout="@layout/fragment_cart"
         android:label="CartFragment" />
 </navigation>

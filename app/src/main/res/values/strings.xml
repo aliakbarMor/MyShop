@@ -39,7 +39,7 @@
     <string name="pleaseEnterPassword">لطفا رمز عبور خود را وارد نمایید!</string>
     <string name="signInSuccessfully">ورود شما با موفقیت انجام شد!</string>
     <string name="signUpSuccessfully">ثبت نام شما با موفقیت انجام شد!</string>
-    <string name="onlyPasswordsLongerThan8CharIsValid">رمز عبور شما باید بیشتر از هشت رقم باشد!</string>
+    <string name="passwordMustBeAtLeastSixDigits">رمز عبور شما حداقل باید شش رقم باشد!</string>
 
     <string name="pay">پرداخت</string>
     <string name="count">تعداد</string>
