@@ -13,11 +13,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.App"
         android:usesCleartextTraffic="true">
-        <activity android:name=".feature.addcomment.AddCommentActivity"></activity>
+        <activity
+            android:name=".feature.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".feature.addcomment.AddCommentActivity" />
         <activity android:name=".feature.profiledetail.ProfileDetailActivity" />
         <activity android:name=".feature.orderhistory.OrderHistoryActivity" />
         <activity android:name=".feature.favorite.FavoriteActivity" />
-        <activity android:name=".feature.checkout.CheckOutActivity">
+        <activity
+            android:name=".feature.checkout.CheckOutActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -37,13 +48,7 @@
         <activity android:name=".feature.productlist.ProductListActivity" />
         <activity android:name=".feature.commentList.CommentListActivity" />
         <activity android:name=".feature.productdetail.ProductDetailActivity" />
-        <activity android:name=".feature.main.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".feature.main.MainActivity" />
     </application>
 
 </manifest>

@@ -20,8 +20,8 @@ class FavoriteViewModel @Inject constructor(private val productRepository: Produ
         viewModelScope.launch {
             productRepository.getFavoriteProducts()
                 .collect {
-                products.value = it
-            }
+                    products.value = it
+                }
         }
     }
 

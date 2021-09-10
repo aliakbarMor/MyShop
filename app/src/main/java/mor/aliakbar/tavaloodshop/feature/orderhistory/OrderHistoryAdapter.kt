@@ -4,12 +4,14 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.qualifiers.ApplicationContext
 import mor.aliakbar.tavaloodshop.customview.imageview.AppImageView
 import mor.aliakbar.tavaloodshop.databinding.ItemOrderHistoryBinding
 import mor.aliakbar.tavaloodshop.model.dataclass.OrderHistoryItem
 import mor.aliakbar.tavaloodshop.services.loaddingImage.LoadingImageServices
+import mor.aliakbar.tavaloodshop.utils.DiffUtilCallBack
 import mor.aliakbar.tavaloodshop.utils.TextUtils.convertEnglishNumberToPersianNumber
 import mor.aliakbar.tavaloodshop.utils.TextUtils.formatPrice
 import mor.aliakbar.tavaloodshop.utils.convertDpToPixel
@@ -24,8 +26,8 @@ class OrderHistoryAdapter @Inject constructor(
 
     var orders = ArrayList<OrderHistoryItem>()
         set(value) {
+            DiffUtil.calculateDiff(DiffUtilCallBack(field, value)).dispatchUpdatesTo(this)
             field = value
-            notifyDataSetChanged()
         }
 
     var onOrderDetailButtonClick: ((orderHistoryItem: OrderHistoryItem) -> Unit)? = null
@@ -50,7 +52,7 @@ class OrderHistoryAdapter @Inject constructor(
         RecyclerView.ViewHolder(binding.root) {
         private val size = convertDpToPixel(100f, context).toInt()
         private val margin = convertDpToPixel(8f, context).toInt()
-        private var layoutParams = LinearLayout.LayoutParams(size , size)
+        private var layoutParams = LinearLayout.LayoutParams(size, size)
 
         init {
             layoutParams.setMargins(margin, 0, margin, 0)

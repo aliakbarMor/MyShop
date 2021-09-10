@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import mor.aliakbar.tavaloodshop.R
 import mor.aliakbar.tavaloodshop.customview.imageview.AppImageView
 import mor.aliakbar.tavaloodshop.model.dataclass.Product
 import mor.aliakbar.tavaloodshop.services.loaddingImage.LoadingImageServices
+import mor.aliakbar.tavaloodshop.utils.DiffUtilCallBack
 import mor.aliakbar.tavaloodshop.utils.TextUtils.formatPrice
 import mor.aliakbar.tavaloodshop.utils.Variable
 import mor.aliakbar.tavaloodshop.utils.implementSpringAnimationTrait
@@ -21,8 +23,8 @@ class ProductAdapter @Inject constructor(val frescoLoadingImage: LoadingImageSer
 
     var products = ArrayList<Product>()
         set(value) {
+            DiffUtil.calculateDiff(DiffUtilCallBack(field, value)).dispatchUpdatesTo(this)
             field = value
-            notifyDataSetChanged()
         }
     var viewType: Int = Variable.PRODUCT_VIEW_TYPE_ROUNDED
 

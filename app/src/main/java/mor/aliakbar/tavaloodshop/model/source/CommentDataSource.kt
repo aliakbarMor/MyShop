@@ -7,5 +7,5 @@ interface CommentDataSource {
 
     fun getAll(productId: Int): Flow<List<Comment>>
 
-    fun add(comment: Comment,productId: Int): Flow<Comment>
+    fun add(comment: Comment, productId: Int): Flow<Comment>
 }

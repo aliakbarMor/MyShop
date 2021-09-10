@@ -7,6 +7,7 @@ import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.launch
 import mor.aliakbar.tavaloodshop.base.BaseViewModel
 import mor.aliakbar.tavaloodshop.model.dataclass.Banner
@@ -32,18 +33,14 @@ class HomeViewModel @Inject constructor(
 
     init {
         progressbarStatusLiveData.value = true
-        try {
-            viewModelScope.launch {
-
-                productRepository.get(Variable.PRODUCT_SORT_LATEST)
-                    .flowCatch()
-                    .collect { products.value = Pair(Variable.PRODUCT_SORT_LATEST, it) }
-                productRepository.get(Variable.PRODUCT_SORT_POPULAR)
-                    .flowCatch()
-                    .collect { products.value = Pair(Variable.PRODUCT_SORT_POPULAR, it) }
-            }
-        } finally {
-            progressbarStatusLiveData.value = false
+        viewModelScope.launch {
+            productRepository.get(Variable.PRODUCT_SORT_LATEST)
+                .flowCatch()
+                .onCompletion { progressbarStatusLiveData.value = false }
+                .collect { products.value = Pair(Variable.PRODUCT_SORT_LATEST, it) }
+            productRepository.get(Variable.PRODUCT_SORT_POPULAR)
+                .flowCatch()
+                .collect { products.value = Pair(Variable.PRODUCT_SORT_POPULAR, it) }
         }
     }
 

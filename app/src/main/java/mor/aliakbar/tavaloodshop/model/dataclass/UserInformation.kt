@@ -6,6 +6,6 @@ data class UserInformation(
     val postalCode: String,
     val phoneNumber: String,
     val address: String
-){
-    var userName:String? = null
+) {
+    var userName: String? = null
 }

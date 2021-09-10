@@ -2,10 +2,12 @@ package mor.aliakbar.tavaloodshop.feature.category
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import mor.aliakbar.tavaloodshop.databinding.ItemCategoryChildBinding
 import mor.aliakbar.tavaloodshop.model.dataclass.CategoryItem
 import mor.aliakbar.tavaloodshop.services.loaddingImage.FrescoLoadingImage
+import mor.aliakbar.tavaloodshop.utils.DiffUtilCallBack
 import javax.inject.Inject
 
 class CategoryChildAdapter @Inject constructor(private val loadingImage: FrescoLoadingImage) :
@@ -13,8 +15,8 @@ class CategoryChildAdapter @Inject constructor(private val loadingImage: FrescoL
 
     var categories = ArrayList<CategoryItem>()
         set(value) {
+            DiffUtil.calculateDiff(DiffUtilCallBack(field, value)).dispatchUpdatesTo(this)
             field = value
-            notifyDataSetChanged()
         }
 
     var onCategoryChildClick: ((CategoryItem) -> Unit)? = null

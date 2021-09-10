@@ -6,7 +6,7 @@ import mor.aliakbar.tavaloodshop.model.dataclass.CategoryItemParent
 
 interface CategoryDataSource {
 
-    fun getCategories():Flow<List<CategoryItem>>
+    fun getCategories(): Flow<List<CategoryItem>>
 
     fun getParentCategories(): Flow<List<CategoryItemParent>>
 

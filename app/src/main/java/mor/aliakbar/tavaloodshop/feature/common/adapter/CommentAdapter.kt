@@ -2,9 +2,11 @@ package mor.aliakbar.tavaloodshop.feature.common.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import mor.aliakbar.tavaloodshop.databinding.ItemCommentBinding
 import mor.aliakbar.tavaloodshop.model.dataclass.Comment
+import mor.aliakbar.tavaloodshop.utils.DiffUtilCallBack
 import javax.inject.Inject
 
 
@@ -13,18 +15,14 @@ class CommentAdapter @Inject constructor() :
 
     var comments = ArrayList<Comment>()
         set(value) {
+            DiffUtil.calculateDiff(DiffUtilCallBack(field, value)).dispatchUpdatesTo(this)
             field = value
-            notifyDataSetChanged()
         }
     var isPreview = true
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding: ItemCommentBinding =
-            ItemCommentBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+            ItemCommentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

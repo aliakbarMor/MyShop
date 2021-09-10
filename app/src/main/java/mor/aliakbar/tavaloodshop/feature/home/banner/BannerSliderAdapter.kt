@@ -5,7 +5,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import mor.aliakbar.tavaloodshop.model.dataclass.Banner
 import mor.aliakbar.tavaloodshop.utils.Variable
 
-class BannerSliderAdapter(fragment: Fragment, val banners: List<Banner>) :
+class BannerSliderAdapter(fragment: Fragment, private val banners: List<Banner>) :
     FragmentStateAdapter(fragment) {
 
     override fun getItemCount(): Int {

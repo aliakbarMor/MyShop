@@ -2,10 +2,12 @@ package mor.aliakbar.tavaloodshop.feature.favorite
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import mor.aliakbar.tavaloodshop.databinding.ItemFavoriteProductBinding
 import mor.aliakbar.tavaloodshop.model.dataclass.Product
 import mor.aliakbar.tavaloodshop.services.loaddingImage.LoadingImageServices
+import mor.aliakbar.tavaloodshop.utils.DiffUtilCallBack
 import javax.inject.Inject
 
 class FavoriteAdapter @Inject constructor(var loadingImageServices: LoadingImageServices) :
@@ -13,8 +15,8 @@ class FavoriteAdapter @Inject constructor(var loadingImageServices: LoadingImage
 
     var products = ArrayList<Product>()
         set(value) {
+            DiffUtil.calculateDiff(DiffUtilCallBack(field, value)).dispatchUpdatesTo(this)
             field = value
-            notifyDataSetChanged()
         }
 
     lateinit var favoriteListener: FavoriteListener

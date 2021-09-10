@@ -1,4 +1,5 @@
 <resources>
+    <string name="mapbox_access_token">sk.eyJ1IjoiYWxpYWtiYXJtb3IiLCJhIjoiY2tzcmZzMzNtMG01ZzJ2bzMyZzlsc2d3byJ9.v_bUuLuMNuc0fvPDzBnByg</string>
     <string name="app_name">Tavalood Shop</string>
     <string name="home">خانه</string>
     <string name="shopping_cart">سبد خرید</string>

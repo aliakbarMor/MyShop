@@ -4,12 +4,14 @@ import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import mor.aliakbar.tavaloodshop.databinding.ItemCartBinding
 import mor.aliakbar.tavaloodshop.databinding.ItemPurchaseDetailsBinding
 import mor.aliakbar.tavaloodshop.model.dataclass.CartItem
 import mor.aliakbar.tavaloodshop.model.dataclass.PurchaseDetail
 import mor.aliakbar.tavaloodshop.services.loaddingImage.LoadingImageServices
+import mor.aliakbar.tavaloodshop.utils.DiffUtilCallBack
 import mor.aliakbar.tavaloodshop.utils.TextUtils.formatPrice
 import mor.aliakbar.tavaloodshop.utils.Variable
 import javax.inject.Inject
@@ -19,8 +21,9 @@ class CartAdapter @Inject constructor(var loadingImageServices: LoadingImageServ
 
     var cartItems = ArrayList<CartItem>()
         set(value) {
+            DiffUtil.calculateDiff(DiffUtilCallBack(field, value)).dispatchUpdatesTo(this)
             field = value
-            notifyDataSetChanged()
+//            notifyDataSetChanged()
         }
     var purchase: PurchaseDetail? = null
         set(value) {

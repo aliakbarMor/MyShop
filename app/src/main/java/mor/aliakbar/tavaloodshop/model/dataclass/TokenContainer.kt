@@ -12,7 +12,12 @@ object TokenContainer {
     fun update(token: String?, refreshToken: String?) {
         Log.i(
             "update token",
-            "Access Token-> ${token?.substring(0, 10)}, Refresh Token-> ${refreshToken?.substring(0, 10)}"
+            "Access Token-> ${token?.substring(0, 10)}, Refresh Token-> ${
+                refreshToken?.substring(
+                    0,
+                    10
+                )
+            }"
         )
         this.token = token
         this.refreshToken = refreshToken

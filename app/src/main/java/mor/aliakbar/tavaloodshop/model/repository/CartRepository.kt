@@ -1,7 +1,10 @@
 package mor.aliakbar.tavaloodshop.model.repository
 
 import kotlinx.coroutines.flow.Flow
-import mor.aliakbar.tavaloodshop.model.dataclass.*
+import mor.aliakbar.tavaloodshop.model.dataclass.AddToCartResponse
+import mor.aliakbar.tavaloodshop.model.dataclass.CartItemCount
+import mor.aliakbar.tavaloodshop.model.dataclass.CartResponse
+import mor.aliakbar.tavaloodshop.model.dataclass.MessageResponse
 
 interface CartRepository {
 

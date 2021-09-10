@@ -2,10 +2,12 @@ package mor.aliakbar.tavaloodshop.feature.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import mor.aliakbar.tavaloodshop.databinding.ItemSearchProductBinding
 import mor.aliakbar.tavaloodshop.model.dataclass.Product
 import mor.aliakbar.tavaloodshop.services.loaddingImage.FrescoLoadingImage
+import mor.aliakbar.tavaloodshop.utils.DiffUtilCallBack
 import javax.inject.Inject
 
 class SearchAdapter @Inject constructor(
@@ -14,9 +16,9 @@ class SearchAdapter @Inject constructor(
 
     var products = ArrayList<Product>()
         set(value) {
+            DiffUtil.calculateDiff(DiffUtilCallBack(field, value)).dispatchUpdatesTo(this)
             field.clear()
             field = value
-            notifyDataSetChanged()
         }
 
     var onProductClick: ((Product) -> Unit)? = null

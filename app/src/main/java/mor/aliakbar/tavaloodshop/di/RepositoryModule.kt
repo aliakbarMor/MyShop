@@ -2,7 +2,6 @@ package mor.aliakbar.tavaloodshop.di
 
 import android.app.Application
 import android.content.Context
-import android.content.SharedPreferences
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

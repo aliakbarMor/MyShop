@@ -6,11 +6,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
 import android.net.Uri
-import android.text.SpannableString
-import android.text.style.RelativeSizeSpan
 import android.util.DisplayMetrics
 import android.util.Log
-import android.util.Patterns
 import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager

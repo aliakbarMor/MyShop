@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.MutableLiveData
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
@@ -15,15 +16,15 @@ import kotlinx.coroutines.runBlocking
 import mor.aliakbar.tavaloodshop.R
 import mor.aliakbar.tavaloodshop.base.BaseFragment
 import mor.aliakbar.tavaloodshop.databinding.FragmentCartBinding
+import mor.aliakbar.tavaloodshop.feature.auth.AuthActivity
+import mor.aliakbar.tavaloodshop.feature.productdetail.ProductDetailActivity
+import mor.aliakbar.tavaloodshop.feature.shipping.ShippingActivity
 import mor.aliakbar.tavaloodshop.model.dataclass.CartItem
 import mor.aliakbar.tavaloodshop.model.dataclass.CartItemCount
-import mor.aliakbar.tavaloodshop.feature.shipping.ShippingActivity
-import mor.aliakbar.tavaloodshop.utils.CoroutineUtils.flowCatch
-import mor.aliakbar.tavaloodshop.utils.Variable
-import mor.aliakbar.tavaloodshop.feature.auth.AuthActivity
 import mor.aliakbar.tavaloodshop.services.exception.AppException
 import mor.aliakbar.tavaloodshop.services.exception.ExceptionType
-import mor.aliakbar.tavaloodshop.feature.productdetail.ProductDetailActivity
+import mor.aliakbar.tavaloodshop.utils.CoroutineUtils.flowCatch
+import mor.aliakbar.tavaloodshop.utils.Variable
 import org.greenrobot.eventbus.EventBus
 import javax.inject.Inject
 
@@ -50,6 +51,11 @@ class CartFragment : BaseFragment<FragmentCartBinding>(), CartItemListener {
     override fun onStart() {
         super.onStart()
         viewModel.refreshData()
+    }
+
+    override fun onPause() {
+        super.onPause()
+//        viewModel.cartItems.value = ArrayList()
     }
 
     override fun onIncreaseBtnClick(cartItem: CartItem) {

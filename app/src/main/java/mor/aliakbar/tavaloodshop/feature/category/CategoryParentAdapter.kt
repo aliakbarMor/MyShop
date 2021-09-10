@@ -6,6 +6,7 @@ import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.qualifiers.ApplicationContext
 import mor.aliakbar.tavaloodshop.R
@@ -13,6 +14,7 @@ import mor.aliakbar.tavaloodshop.databinding.ItemCategoryCompactBinding
 import mor.aliakbar.tavaloodshop.databinding.ItemCategoryLinearBinding
 import mor.aliakbar.tavaloodshop.model.dataclass.CategoryItemParent
 import mor.aliakbar.tavaloodshop.services.loaddingImage.FrescoLoadingImage
+import mor.aliakbar.tavaloodshop.utils.DiffUtilCallBack
 import mor.aliakbar.tavaloodshop.utils.Variable
 import javax.inject.Inject
 
@@ -22,17 +24,12 @@ class CategoryParentAdapter @Inject constructor(
     @ApplicationContext private var context: Context
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-
     var categories = ArrayList<CategoryItemParent>()
         set(value) {
+            DiffUtil.calculateDiff(DiffUtilCallBack(field, value)).dispatchUpdatesTo(this)
             field = value
-            notifyDataSetChanged()
         }
     var viewType: Int = Variable.CATEGORY_VIEW_TYPE_LINEAR
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
 
     var onCategoryParentClick: ((CategoryItemParent) -> Unit)? = null
 

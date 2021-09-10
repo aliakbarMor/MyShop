@@ -18,14 +18,14 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import mor.aliakbar.tavaloodshop.base.BaseFragment
 import mor.aliakbar.tavaloodshop.databinding.FragmentHomeBinding
+import mor.aliakbar.tavaloodshop.feature.common.adapter.ProductAdapter
+import mor.aliakbar.tavaloodshop.feature.common.adapter.ProductListener
+import mor.aliakbar.tavaloodshop.feature.home.banner.BannerSliderAdapter
+import mor.aliakbar.tavaloodshop.feature.productdetail.ProductDetailActivity
+import mor.aliakbar.tavaloodshop.feature.productlist.ProductListActivity
 import mor.aliakbar.tavaloodshop.model.dataclass.Product
 import mor.aliakbar.tavaloodshop.utils.Variable
 import mor.aliakbar.tavaloodshop.utils.hideKeyboard
-import mor.aliakbar.tavaloodshop.feature.common.adapter.ProductAdapter
-import mor.aliakbar.tavaloodshop.feature.common.adapter.ProductListener
-import mor.aliakbar.tavaloodshop.feature.productdetail.ProductDetailActivity
-import mor.aliakbar.tavaloodshop.feature.home.banner.BannerSliderAdapter
-import mor.aliakbar.tavaloodshop.feature.productlist.ProductListActivity
 import javax.inject.Inject
 import kotlin.math.abs
 
@@ -75,8 +75,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), ProductListener {
                 latestProductAdapter.products = it.second as ArrayList<Product>
             else if (it.first == Variable.PRODUCT_SORT_POPULAR)
                 popularProductAdapter.products = it.second as ArrayList<Product>
-
         }
+
         viewModel.progressbarStatusLiveData.observe(viewLifecycleOwner) {
             showProgressbar(it)
         }

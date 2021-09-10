@@ -99,6 +99,8 @@
                     android:textAppearance="?textAppearanceBody1" />
             </com.google.android.material.textfield.TextInputLayout>
 
+
+
             <include
                 android:id="@+id/purchaseDetailView"
                 layout="@layout/item_purchase_details"
